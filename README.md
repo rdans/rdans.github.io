@@ -1,10 +1,10 @@
 ## Welcome to Reinaldo Daniswara's Page
 
-Name        : Reinaldo Daniswara
-University  : University of California, Los Angeles
-Major       : Computer Science, 
-              Sci-Tech in Statistic 
-              Tech-Breadth in Technology Management
+Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Reinaldo Daniswara <br />
+University  : University of California, Los Angeles <br />
+Major &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Computer Science, <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         Sci-Tech in Statistic <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tech-Breadth in Technology Management <br />
 
 ### Markdown
 
