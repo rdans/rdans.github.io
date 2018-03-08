@@ -4,11 +4,11 @@
 Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia. 
 # Educations
 
-|Year|Name  | Location| Level |
+|Year|Level |Name  | Location| 
 |---|---|---|---|
-|2011-2014  | SMA Santa Angela  |Bandung, Indonesia | High School |
-|2014-2016  | Edmonds Community College  |Lynnwood, WA, USA | College |
-|2016-2018  | UCLA  |Los Angeles, CA, USA | University |
+|2011-2014  | High School |SMA Santa Angela  |Bandung, Indonesia | 
+|2014-2016  | College |Edmonds Community College  |Lynnwood, WA, USA | 
+|2016-2018  | University |UCLA  |Los Angeles, CA, USA | 
 
 
 # Majors
