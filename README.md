@@ -17,7 +17,7 @@ I'm studying **Computer Science** and I have passion in data and economics. Thus
 
 
 # Courses
-Click here to see the list of courses that I took in UCLA. 
+Click [here](courses.md) to see the list of courses that I took in UCLA. 
 
 
 ### Contact me:
