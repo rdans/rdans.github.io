@@ -1,39 +1,18 @@
-## Welcome to Reinaldo Daniswara's Page
+# Welcome to Reinaldo Daniswara's Page!
 
-Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Reinaldo Daniswara <br />
-University  : University of California, Los Angeles <br />
-Major &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Computer Science, <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         Sci-Tech in Statistic <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tech-Breadth in Technology Management <br />
+Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia. Well, you are in my website now, and you will know some stuff about me.
 
-### Markdown
+# Educations
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+|Year|Name  | Location| Level |
+|---|---|---|---|
+|2011-2014  | SMA Santa Angela  |Bandung, Indonesia | High School |
+|2014-2016  | Edmonds Community College  |Lynnwood, WA, USA | College |
+|2016-2018  | UCLA  |Los Angeles, CA, USA | University |
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# Majors
 
-- Bulleted
-- List
+I'm studying **Computer Science** and I have passion in data and economics. Thus, while completing my Computer Science degree in UCLA, I choose my **Statistics** as my sci-tech, and **Technology Management** as my Tech-Breadth. What is [Sci-Tech](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/CS-Sci-Tech-List-current.pdf) and [Tech-Breadth](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/TBA.pdf)? 
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rdans/rdans.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
