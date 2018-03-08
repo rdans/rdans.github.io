@@ -1,4 +1,4 @@
-# Welcome to Reinaldo Daniswara's Page!
+# Welcome to My Page!
 
 Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia. 
 # Educations
