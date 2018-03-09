@@ -1,4 +1,6 @@
 # Courses
+List of related courses that I took or are currently taking in UCLA
+
 
 ## Computer Science
 
@@ -26,5 +28,7 @@
  - Engineering 110 - Introduction to Technology Management and Economics for Engineers
  - Engineering 111 - Introduction to Finance and Marketing for Engineers
  - Engineering 112 - Laboratory to Market, Entrepreneurship for Engineers
+ 
+ # Go Back to Home Page! [:house:](READNE.md)
 
 
