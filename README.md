@@ -1,5 +1,5 @@
 
-# Welcome to Reinaldo Daniswara Home Page! [:house:](READNE.md)
+# Welcome to Reinaldo Daniswara Home Page! [:house:](README.md)
 
 Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia. 
 # Educations
