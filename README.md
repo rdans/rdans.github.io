@@ -13,7 +13,7 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 
 # Majors
 
-I'm studying **Computer Science** and I have passion in data and economics. Thus, while completing my Computer Science degree in UCLA, I choose my **Statistics** as my sci-tech, and **Technology Management** as my Tech-Breadth. What is [Sci-Tech](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/CS-Sci-Tech-List-current.pdf) and [Tech-Breadth](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/TBA.pdf)?
+I'm studying **Computer Science** and I have passions in data mining and economics. Thus, while completing my Computer Science degree in UCLA, I choose **Statistics** as my sci-tech, and **Technology Management** as my Tech-Breadth. What is [Sci-Tech](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/CS-Sci-Tech-List-current.pdf) and [Tech-Breadth](http://www.seasoasa.ucla.edu/wp-content/uploads/seasoasa/TBA.pdf)?
 
 
 # Courses
