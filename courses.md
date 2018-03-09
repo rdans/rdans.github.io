@@ -29,6 +29,6 @@ List of related courses that I took or are currently taking in UCLA
  - Engineering 111 - Introduction to Finance and Marketing for Engineers
  - Engineering 112 - Laboratory to Market, Entrepreneurship for Engineers
  
- # Go Back to Home Page! [:house:](READNE.md)
+ # Go Back to Home Page! [:house:](README.md)
 
 
