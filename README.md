@@ -21,4 +21,5 @@ Click [here](courses.md) to see the list of courses that I took in UCLA.
 
 
 ### Contact me:
-reinaldo.daniswara@gmail.com
+<mailto:reinaldo.daniswara@gmail.com>
+[reinaldo.daniswara@gmail.com](mailto:reinaldo.daniswara@gmail.com)
