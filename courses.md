@@ -11,7 +11,7 @@ List of related courses that I took or are currently taking in UCLA
  - [CS 111 - Operating Systems Principles](https://github.com/rdans/cs-111-OperatingSystem-UCLA)
  - [CS 131 - Programming Languages](https://github.com/rdans/cs-131-ProgrammingLanguage-UCLA)
  - CS 180 - Introduction to Algorithms and Complexity
- - CS 118 - Computer Network Fundamentals
+ - [CS 118 - Computer Network Fundamentals] (https://github.com/rdans/cs-118-Computer_Network_Fundamental)
  - [CS M146 - Introduction to Machine Learning](https://github.com/rdans/Intro_to_Machine-Learning)
  - CS M151B - Computer Systems Architecture
  - CS 181 - Introduction to Formal Languages and Automata Theory
