@@ -6,7 +6,7 @@ List of related courses that I took or are currently taking in UCLA
 
  - CS M51A - Logic Design of Digital Systems
  - CS 35L - Software Construction Laboratory
- - CS 33 - Introduction to Computer Organization
+ - [CS 33 - Introduction to Computer Organization](https://github.com/rdans/cs-33-Introduction-to-Computer-Organization-UCLA)
  - CS M152A - Introductory Digital Design Laboratory
  - [CS 111 - Operating Systems Principles](https://github.com/rdans/cs-111-OperatingSystem-UCLA)
  - [CS 131 - Programming Languages](https://github.com/rdans/cs-131-ProgrammingLanguage-UCLA)
