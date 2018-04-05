@@ -25,7 +25,7 @@ List of related courses that I took or are currently taking in UCLA
 ## Statistics
 
  - Stats 100A - Introduction to Probability
- - Stats 100B - Introduction to Mathematical Statistics
+ - [Stats 100B - Introduction to Mathematical Statistics](https://github.com/rdans/stats-100B)
  - Stats 102C - Introduction to Monte Carlo Method
 
 ## Technology Management
