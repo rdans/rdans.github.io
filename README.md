@@ -12,7 +12,7 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 |2016-2018  | University |UCLA  |Los Angeles, CA, USA | 
 
 <img align="left" width="100" height="100" src="https://github.com/rdans/rdans.github.io/blob/master/santa_angela.png">
-<p>
+<\ br>
 
 # Majors
 
