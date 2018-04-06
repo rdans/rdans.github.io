@@ -21,6 +21,8 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 <br />
 <br />
 <br />
+<br />
+<br />
 
 # Majors
 
