@@ -12,9 +12,9 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 |2014-2016  | College |Edmonds Community College  |Lynnwood, WA, USA | 
 |2016-2018  | University |UCLA  |Los Angeles, CA, USA | 
 
-<img align="left" width="200" height="200" src="https://github.com/rdans/rdans.github.io/blob/master/santa_angela.png">
-<img align="center" width="200" height="200" src="https://github.com/rdans/rdans.github.io/blob/master/edmonds.png">
-<img align="left" width="400" height="200" src="https://photos.app.goo.gl/lqu77WO5YlLrhUwc2">
+<img align="left" width="200" height="200" src="https://drive.google.com/uc?id=1kAg5LZK63XLgOvrnIBGsfApPsglftL9i">
+<img align="center" width="200" height="200" src="https://drive.google.com/uc?id=1WKIiX8MHFMEJi9FbnqVHPVLhxwqfdrGp">
+<img align="left" width="400" height="200" src="https://drive.google.com/uc?id=13decU_K7ZRikIE74gwLGhmeE3sD0ljGq">
 <br />
 <br />
 <br />
