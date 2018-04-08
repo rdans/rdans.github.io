@@ -1,8 +1,9 @@
 # Courses [:house:](README.md)
 List of related courses that I took or are currently taking in UCLA
 <br />
-<img align="middle" width="500" height="300" src="https://goo.gl/images/xA2Vyr">
-
+<center>
+<img align="middle" width="500" height="300" src="https://drive.google.com/uc?id=10b6bvcAsvQ5F5ThMA2A-rjBwDyrnIVli">
+</center>
 
 ## Computer Science
 
