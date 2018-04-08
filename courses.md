@@ -1,5 +1,6 @@
 # Courses [:house:](README.md)
 List of related courses that I took or are currently taking in UCLA
+<br />
 <img align="center" width="200" height="200" src="https://goo.gl/images/xA2Vyr">
 
 
