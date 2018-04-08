@@ -14,7 +14,7 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 
 <img align="left" width="200" height="200" src="https://github.com/rdans/rdans.github.io/blob/master/santa_angela.png">
 <img align="center" width="200" height="200" src="https://github.com/rdans/rdans.github.io/blob/master/edmonds.png">
-<img align="left" width="400" height="200" src="https://goo.gl/images/2O2Kee">
+<img align="left" width="400" height="200" src="https://photos.app.goo.gl/lqu77WO5YlLrhUwc2">
 <br />
 <br />
 <br />
