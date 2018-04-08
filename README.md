@@ -16,7 +16,9 @@ Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia.
 <img align="center" width="200" height="200" src="https://drive.google.com/uc?id=1WKIiX8MHFMEJi9FbnqVHPVLhxwqfdrGp">
 <br />
 <br />
+<a href = "http://www.ucla.edu/">
 <img align="left" width="400" height="200" src="https://drive.google.com/uc?id=13decU_K7ZRikIE74gwLGhmeE3sD0ljGq">
+</a>
 <br />
 <br />
 <br />
