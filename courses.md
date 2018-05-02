@@ -18,9 +18,9 @@ List of related courses that I took or are currently taking in UCLA
  - [CS M146 - Introduction to Machine Learning](https://github.com/rdans/Intro_to_Machine-Learning)
  - CS M151B - Computer Systems Architecture
  - CS 181 - Introduction to Formal Languages and Automata Theory
- - CS 143 - Database Systems
+ - [CS 143 - Database Systems](https://github.com/TomZhang95/UCLA-CS-143)
  - CS M124 - Computational Genetics
- - CS M168 - Computational Methods for Medical Imaging
+ - [CS M168 - Computational Methods for Medical Imaging](http://reinaldodaniswara.com/medicalimaging.html)
  - CS M117 - Computer Network: Physical Layer
 
 
