@@ -1,6 +1,7 @@
 
 
 
+
 # Welcome to Reinaldo Daniswara Home Page! [:house:](README.md)
 
 Hi! My name is Reinaldo Daniswara. I was born in Jakarta, Indonesia. 
@@ -47,7 +48,11 @@ Abstract:
 Radar can be used to detect faint movements through dense material, map terrain through dense cloud cover miles above the earth, and calculate the distance from a point to an object. While regarded as a mature technology, Radar is by no means a dead field; current research includes detecting motion through walls, for search and rescue and law enforcement applications, detecting landmines, and consumer vehicle collision detection. We present here our work on the construction and testing of an extremely flexible yet inexpensive Frequency Modulated Continuous Wave (FMCW) microwave radar, based on MIT opencourseware, which is suitable for simultaneous range finding, synthetic-aperture imaging, Doppler-shift velocity determination and measurement of microwave absorptance of materials. Our Radar is constructed from off-the-shelf RF components, waveguide antennas made from recycled coffee cans, and interfaces with a laptop PC through its sound card, allowing us to perform digital signal processing and software visualization. </p>
 See or donwload pdf here: [Synthetic-Aperture-Radar](https://github.com/rdans/rdans.github.io/blob/master/Synthetic-Aperture-Radar-Imaging-Doppler-and-Ranging-Through-Solids-Using-Frequency-Modulated-Continuous-Wave-Radar.pdf)
 
-
+# Awards
+ - Honorable Best Visualization (Data Fest Hackathon 2018)
+	 - Extracted, transformed, and loaded 2.5 GB data about employment opportunities from indeed.com.  
+	 - Created recommendation to high school student via presentation and visualization to decide what major to choose based on area's availability.
+	 - See project [here](https://github.com/rdans/Data-Fest-2018/raw/master/DataFest-2018.pdf)
 
 ### Contact me:
 :email:
