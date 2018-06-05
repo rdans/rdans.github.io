@@ -189,7 +189,7 @@ def lung_segmentation(data):
 segmented_lung_sample = lung_segmentation(resampled_patient_img_sample)
 #plt.imshow(segmented_lung_sample[:,:,63], cmap=plt.cm.bone)
 #plt.show()
----------------
+
 def reshape_data(segmented_lung, desired_shape):
     shape = list(segmented_lung.shape)
     differences = np.array(desired_shape) - np.array(shape)
@@ -217,7 +217,7 @@ def reshape_data(segmented_lung, desired_shape):
 
 desired_shape = [250, 350, 400]
 reshaped_sample = reshape_data(segmented_lung_sample, desired_shape)
---------------
+
 def normalize_data(reshaped_data, min_huval, max_huval):
     normalized_data = (reshaped_data - min_huval) / (max_huval - min_huval)
     normalized_data[normalized_data < 0.] = 0.
@@ -237,12 +237,11 @@ def zero_centering(data, mean):
 
 mean = 0.3
 preprocessed_sample = zero_centering(normalized_sample, mean)
-plt.imshow(preprocessed_sample[:,:,114], cmap=plt.cm.bone)
-plt.show()
+#plt.imshow(preprocessed_sample[:,:,114], cmap=plt.cm.bone)
+#plt.show()
 
 labels = pd.read_csv('stage1_labels.csv')
 
-# folder for saving preprocessed data
 save_data_folder = './sample_images_preprocessed/'
 
 for patient in patients:
@@ -258,7 +257,7 @@ for patient in patients:
                                       bone_hu)
     preprocessed_patient_img = zero_centering(normalized_patient_img, mean)
     
-    # read label
+    # reading the label
     patient_label = labels[labels['id'] == patient]
     
     # save preprocessed data to a .npz file
@@ -274,7 +273,6 @@ for patient in patients:
                             data = preprocessed_patient_img,
                             set = 'test')    
     
-    # print out the shape information
     print('Patient: ' + patient)
     print('Resampled shape: ({:3d},{:3d},{:3d}) \
         Segmented shape: ({:3d},{:3d},{:3d}) \
