@@ -230,7 +230,6 @@ bone_hu = 400.
 normalized_sample = normalize_data(reshaped_sample,
                                    air_hu,
                                    bone_hu)
----------------
 
 def zero_centering(data, mean):
     return data - mean
