@@ -1,6 +1,7 @@
 
 
 
+
 # CS 168 Computational Methods for Medical Imaging 
 
 **Automatic Lung's Grade Image Classification from CT**
@@ -25,13 +26,22 @@ Load the data:
 def read_data(patient_dir):
     patient_img = []
     for dcmfile in os.listdir(patient_dir):
-        patient_img.append(dicom.read_file(patient_dir + '/' + dcmfile))
+        patient_img.append(dicom.read_file(patient_dir + '/' + dcmfile, force=True))
         patient_img
     patient_img.sort(key = lambda slice: float(slice.ImagePositionPatient[2]))
     return patient_img
     
-data_folder = './sample_images/'
+data_folder = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/sample_images'
 patients = os.listdir(data_folder)
+num = len(patients)
+slash = []
+for i in range(0,num):
+    a = "/"
+    slash.append(a)
+    slash
+patients = [m+str(n) for m,n in zip(slash,patients)]
+patients = patients[1:]
+print(patients)
 ```
 
 Below is the code for the pixel adjustment.
@@ -54,10 +64,8 @@ def hu_array(patient_img):
 hu_array_sample = hu_array(patient_img_sample)
 
 def resample_data(patient_img, new_spacings):
-    # obtain original spacing in z-direction
     original_z_spacing = np.abs(patient_img[0].ImagePositionPatient[2]
                                 - patient_img[1].ImagePositionPatient[2])
-    # obtain rescaled HU array
     hu_array = hu_array(patient_img)
     
     original_spacings = np.array(patient_img[0].PixelSpacing + [original_z_spacing], dtype='float32')
@@ -67,7 +75,7 @@ def resample_data(patient_img, new_spacings):
     
     return scipy.ndimage.interpolation.zoom(hu_array, zoom_factor, mode='nearest')
 
-new_spacings = [1, 1, 1] # unit: mm
+new_spacings = [1, 1, 1] 
 resampled_patient_img_sample = resample_data(patient_img_sample, new_spacings)
 plt.imshow(resampled_patient_img_sample[:,:,100], cmap=plt.cm.bone)
 plt.show()
@@ -205,7 +213,7 @@ def reshape_data(segmented_lung, desired_shape):
         else:
             padding.append((before, after))
                 
-            print('Data trimmed for axis ' + str(i))
+            print('Trimmed data for axis ' + str(i))
 
     reshaped_data = np.lib.pad(segmented_lung, tuple(padding), 'constant', constant_values=30)
     assert (list(reshaped_data.shape) == desired_shape), \
@@ -239,7 +247,7 @@ preprocessed_sample = zero_centering(normalized_sample, mean)
 #plt.imshow(preprocessed_sample[:,:,114], cmap=plt.cm.bone)
 #plt.show()
 
-labels = pd.read_csv('stage1_labels.csv')
+labels = pd.read_csv('/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/stage1_labels.csv')
 
 save_data_folder = './sample_images_preprocessed/'
 
