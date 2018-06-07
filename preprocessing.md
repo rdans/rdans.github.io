@@ -226,6 +226,7 @@ def reshape_data(segmented_lung, desired_shape):
 desired_shape = [250, 350, 400]
 reshaped_sample = reshape_data(segmented_lung_sample, desired_shape)
 
+# to reduce the image noise
 def normalize_data(reshaped_data, min_huval, max_huval):
     normalized_data = (reshaped_data - min_huval) / (max_huval - min_huval)
     normalized_data[normalized_data < 0.] = 0.
@@ -235,9 +236,7 @@ def normalize_data(reshaped_data, min_huval, max_huval):
 air_hu = -1000.
 bone_hu = 400.
 
-normalized_sample = normalize_data(reshaped_sample,
-                                   air_hu,
-                                   bone_hu)
+normalized_sample = normalize_data(reshaped_sample, air_hu, bone_hu)
 
 def zero_centering(data, mean):
     return data - mean
@@ -249,7 +248,7 @@ preprocessed_sample = zero_centering(normalized_sample, mean)
 
 labels = pd.read_csv('/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/stage1_labels.csv')
 
-save_data_folder = './sample_images_preprocessed/'
+save_data_folder = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/sample_images_preprocessed/'
 
 for patient in patients:
     if (os.path.exists(save_data_folder + patient + '.npz')):
@@ -259,9 +258,7 @@ for patient in patients:
     resampled_patient_img = resample_data(patient_img, new_spacings)
     segmented_lung = lung_segmentation(resampled_patient_img)
     reshaped_patient_img = reshape_data(segmented_lung, desired_shape)
-    normalized_patient_img = normalize_data(reshaped_patient_img,
-                                      air_hu,
-                                      bone_hu)
+    normalized_patient_img = normalize_data(reshaped_patient_img, air_hu, bone_hu)
     preprocessed_patient_img = zero_centering(normalized_patient_img, mean)
     
     # reading the label
