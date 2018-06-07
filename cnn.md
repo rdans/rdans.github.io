@@ -193,7 +193,7 @@ epochs = 4
 keep_probability = 0.7
 model_save_path = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
 
-# start training
+# ---- start training ----
 with tf.Session() as sess:
     # initialization
     sess.run(tf.global_variables_initializer())
@@ -209,6 +209,5 @@ with tf.Session() as sess:
             print('Epoch {:>2}, Batch {:>3} '.format(epoch + 1, batch_index), end='\r')
         print('Epoch {:>2} '.format(epoch + 1), end='')
         print_stat(sess, cost, accuracy)
-        # save model
         saver.save(sess, model_save_path + '_' + str(epoch))
 ```
