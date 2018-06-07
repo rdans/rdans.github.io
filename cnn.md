@@ -191,9 +191,9 @@ def print_stat(session, cost, accuracy):
 # hyperparameters, can be tuned
 epochs = 4
 keep_probability = 0.7
-model_save_path = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
+model_save = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
 
-# ---- start training ----
+# start training
 with tf.Session() as sess:
     # initialization
     sess.run(tf.global_variables_initializer())
@@ -209,5 +209,94 @@ with tf.Session() as sess:
             print('Epoch {:>2}, Batch {:>3} '.format(epoch + 1, batch_index), end='\r')
         print('Epoch {:>2} '.format(epoch + 1), end='')
         print_stat(sess, cost, accuracy)
-        saver.save(sess, model_save_path + '_' + str(epoch))
+        # save model
+        saver.save(sess, model_save + '_' + str(epoch))
+```
+## Testing the data
+```python
+preimg_dir = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/stage1_preprocessed/' 
+data_shape = [250, 350, 350]
+batch_size = 10 #to prevent running out of memory
+
+patients = os.listdir(preimg_dir)
+patients.sort()
+
+test_size = 0
+
+test_batch = []
+curr_test_batch = []
+
+
+for i in range(len(patients)):  
+    if patients[i].startswith('.'): continue 
+    
+    if np.load(preimg_dir + patients[i])['set'] == 'test':
+        curr_test_batch.append(patients[i])
+        
+        #  full batch handler
+        if (len(curr_test_batch) == batch_size): 
+            test_batch.append(curr_test_batch)
+            test_size = test_size + batch_size
+            curr_test_batch = []
+
+# save the remaining test data
+if len(curr_test_batch) != 0:
+    test_size = test_size + len(curr_test_batch)
+    # pad zeros to make its size equal to batch_size
+    while (len(curr_test_batch) != batch_size):
+        curr_test_batch.append(0)
+    test_batch.append(curr_test_batch)
+    curr_test_batch = []
+
+test_batch = np.array(test_batch)
+
+def batch_in(batch_files):
+    current_batch_size = batch_size - np.sum(batch_files == '0')
+    
+    batch_features = np.zeros((current_batch_size, data_shape[0], data_shape[1], data_shape[2], 1))
+    batch_ids = []
+    
+    for i in range(len(batch_files)):
+        if batch_files[i] != '0':
+            data = np.load(preimg_dir + batch_files[i])
+            batch_features[i,:,:,:,0] = data['data']
+            batch_ids.append(batch_files[i][:32])
+
+    return batch_features, batch_ids
+
+test_features_batch_sample, test_ids_batch_sample = batch_in(test_batch[0])
+
+plt.imshow(test_features_batch_sample[0,:,:,100,0], cmap=plt.cm.bone)
+plt.show()
+
+#--- test model ---- 
+model_save = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
+result_save = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/cancer.csv'
+
+cnn_graph = tf.Graph()
+open_file = open(result_save, 'w')
+open_file.write('id,cancer\n') # header line
+
+with tf.Session(graph=cnn_graph) as sess:
+    loader = tf.train.import_meta_graph(model_save + '.meta')
+    loader.restore(sess, model_save)
+    
+    # get tensors
+    x = cnn_graph.get_tensor_by_name('x:0')
+    y = cnn_graph.get_tensor_by_name('y:0')
+    pl_prob = cnn_graph.get_tensor_by_name('pl_prob:0')
+    logits = cnn_graph.get_tensor_by_name('logits:0')
+
+    for batch_index in range(test_batch.shape[0]):
+        test_features_batch, test_ids_batch = batch_in(test_batch[batch_index])
+        predictions = sess.run(tf.nn.softmax(logits), feed_dict={
+            x: test_features_batch,
+            pl_prob: 1.
+        })
+        
+        for test_index in range(len(test_ids_batch)):
+            open_file.write(test_ids_batch[test_index] + ',' + str(predictions[test_index,1]) + '\n')
+            print('ID: ' + test_ids_batch[test_index] + ', Cancer probability: ' + str(predictions[test_index,1]))
+
+open_file.close()
 ```
