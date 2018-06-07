@@ -300,3 +300,4 @@ with tf.Session(graph=cnn_graph) as sess:
 
 open_file.close()
 ```
+[Go back to the weekly progress page](http://reinaldodaniswara.com/medicalimaging.html)
