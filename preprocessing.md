@@ -292,3 +292,4 @@ for patient in patients:
         preprocessed_patient_img.shape[2],))
 print('Finish Preprocessing')
 ```
+[<< Go back to the weekly progress page](http://reinaldodaniswara.com/medicalimaging.html) ||[3D CNN code >>](http://reinaldodaniswara.com/cnn.html)
