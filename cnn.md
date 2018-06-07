@@ -1,4 +1,5 @@
 
+
 # CS 168 Computational Methods for Medical Imaging 
 
 **Automatic Lung's Grade Image Classification from CT**
@@ -12,6 +13,9 @@ We pick this method because unlike the traditional detection for the appearance 
 The basic architecture for our neural network is CT images -> convolution & pooling -> flatten layer -> fully connected layer -> output layer
 
 In our implementation, we do convolutions and immediately followed by max-pooling method for 3 times, which are 32, 64, and 128 features. After that, before the data can be used as an input for a fully-connected layer, we need to convert the convolution result into a 2D tensor. At the end, we need to connect all the nodes before producing the output, and this is the duty of the fully connected layer become in handy.
+
+In order to write this code, I look at the example tutorial for tensorflow from this link 
+https://github.com/aymericdamien/TensorFlow-Examples
 
 ```python
 def con_3d(tensor, conv_outputs, kernel_size, stride): 
@@ -102,4 +106,109 @@ def output(tensor, conv_outputs):
     
     return y
 
+```
+The main reference file that we used for this project can be seen in here.
+https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/4_Utils/save_restore_model.py
+The author write a really good example on how to develop a neural network model that we can follow easily.
+
+Below is the code to build a neural network
+
+```python
+tf.reset_default_graph()
+
+# inputs
+x = tf.placeholder(tf.float32, (None, data_shape[0], data_shape[1], data_shape[2], 1), name='x')
+y = tf.placeholder(tf.float32, (None, 2), name='y')
+
+pl_prob = tf.placeholder(tf.float32, name='pl_prob')
+logits = conv_net(x, pl_prob)
+logits = tf.identity(logits, name='logits') # name logits tensor
+
+# Define loss and optimizer
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y), name='cost')
+optimizer = tf.train.AdamOptimizer().minimize(cost) # Adam gradient descent optimizer
+
+# accuracy
+correct_prediction = tf.equal(tf.argmax(logits, 1), tf.argmax(y, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32), name='accuracy')
+```
+To train the model, this is also another reference that we follow:
+https://min-sheng.github.io/deep-learning-cv/week3/Project/final_dlnd_image_classification_with_DA.html
+
+```python
+def train_cnn(session, optimizer, keep_probability, features_batch, labels_batch):
+    session.run(optimizer, feed_dict={
+        x: features_batch,
+        y: labels_batch,
+        pl_prob: keep_probability
+    })
+
+def stat_val(session, function, n_batch, set):
+    if set == 'valid':
+        assert (n_batch <= valid_batches.shape[0])
+        batches = valid_batches
+    if set == 'train':
+        assert (n_batch <= train_batches.shape[0])
+        batches = train_batches
+    
+    batch_indices = np.arange(batches.shape[0])
+    shuffle(batch_indices) 
+    # select first n_batch batches
+    batch_indices = batch_indices[:n_batch] 
+    
+    total_size = 0.
+    total_stats = 0.
+
+    # Find the selected set
+    for batch_index in batch_indices:
+        features, labels = read_batch(batches[batch_index])
+        current_stats = session.run(function, feed_dict={
+                                    x: features,
+                                    y: labels,
+                                    pl_prob: 1. # deactivate dropout layer
+                                    })
+        current_batch_size = batch_size - np.sum(batches[batch_index] == '0')
+        total_stats = total_stats + current_stats * current_batch_size
+        total_size = total_size + current_batch_size
+        stat_result = total_stats / total_size
+    
+    return stat_result
+```
+
+Printing the stat, tune up the hyperparameter, 
+```python
+def print_stat(session, cost, accuracy):
+    # training loss
+    loss = stat_val(session, cost, 200, 'train')
+    # validation loss
+    valid_loss = stat_val(session, cost, 50, 'valid')
+    # validation accuracy
+    valid_accuracy = stat_val(session, accuracy, 50, 'valid')
+    
+    print('Training Loss: {:>8.4f} Validation Loss: {:>8.4f} Validation Accuracy: {:.6f}'.format(
+        loss, valid_loss, valid_accuracy))
+
+# hyperparameters, can be tuned
+epochs = 4
+keep_probability = 0.7
+model_save_path = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
+
+# start training
+with tf.Session() as sess:
+    # initialization
+    sess.run(tf.global_variables_initializer())
+    
+    # saver
+    saver = tf.train.Saver()
+    
+    # training
+    for epoch in range(epochs):
+        for batch_index in range(train_batches.shape[0]):
+            features_batch, labels_batch = read_batch(train_batches[batch_index])
+            train_cnn(sess, optimizer, keep_probability, features_batch, labels_batch)
+            print('Epoch {:>2}, Batch {:>3} '.format(epoch + 1, batch_index), end='\r')
+        print('Epoch {:>2} '.format(epoch + 1), end='')
+        print_stat(sess, cost, accuracy)
+        # save model
+        saver.save(sess, model_save_path + '_' + str(epoch))
 ```
