@@ -10,7 +10,7 @@ by Reinaldo Daniswara and Tianyang Zhang
  - Week 4: Team formed and research begin.
  - Week 5: Research and start writing Introduction or Review of state-of-the-art.
  - Week 6: More deep research on medical imaging on Cancer Detection.
- - Week 7: Gather datasets for preprocessing image from [here](https://www.kaggle.com/c/data-science-bowl-2017/data)
+ - Week 7: Gather datasets for preprocessing image from [here](https://www.kaggle.com/c/data-science-bowl-2017)
  - Week 8: Preprocess and Building a Convolutional Neural Network. 
  - Week 9: Building a Convolutional Neural Network (Cont.) and testing data.
  - Week 10: Report and Poster time.
