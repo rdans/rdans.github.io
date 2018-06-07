@@ -266,8 +266,8 @@ def batch_in(batch_files):
 
 test_features_batch_sample, test_ids_batch_sample = batch_in(test_batch[0])
 
-plt.imshow(test_features_batch_sample[0,:,:,100,0], cmap=plt.cm.bone)
-plt.show()
+#plt.imshow(test_features_batch_sample[0,:,:,100,0], cmap=plt.cm.bone)
+#plt.show()
 
 #--- test model ---- 
 model_save = '/Users/reinaldodaniswara/Desktop/cs168/project/code/patient_folder/data_folder/model1'
