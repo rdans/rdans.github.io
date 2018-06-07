@@ -14,8 +14,8 @@ The basic architecture for our neural network is CT images -> convolution & pool
 
 In our implementation, we do convolutions and immediately followed by max-pooling method for 3 times, which are 32, 64, and 128 features. After that, before the data can be used as an input for a fully-connected layer, we need to convert the convolution result into a 2D tensor. At the end, we need to connect all the nodes before producing the output, and this is the duty of the fully connected layer become in handy.
 
-In order to write this code, I look at the example tutorial for tensorflow from this link 
-https://github.com/aymericdamien/TensorFlow-Examples
+In order to write this code, I look at the example tutorial for tensorflow from github user [aymericdamien] 
+(https://github.com/aymericdamien/TensorFlow-Examples)
 
 ```python
 def con_3d(tensor, conv_outputs, kernel_size, stride): 
@@ -107,8 +107,7 @@ def output(tensor, conv_outputs):
     return y
 
 ```
-The main reference file that we used for this project can be seen in here.
-https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/4_Utils/save_restore_model.py
+Tho build the network model, [here](https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/4_Utils/save_restore_model.py) is there example code that I reference to.
 The author write a really good example on how to develop a neural network model that we can follow easily.
 
 Below is the code to build a neural network
