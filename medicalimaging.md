@@ -12,8 +12,8 @@ by Reinaldo Daniswara and Tianyang Zhang
  - Week 6: More deep research on medical imaging on Cancer Detection.
  - Week 7: Gather datasets for preprocessing image from [here](https://www.kaggle.com/c/data-science-bowl-2017)
  - Week 8: Preprocess and Building a Convolutional Neural Network. 
- - Week 9: Building a Convolutional Neural Network (Cont.) and testing data.
- - Week 10: Report and Poster time.
+ - Week 9: Building a Convolutional Neural Network (Cont.), training and testing data.
+ - Week 10: Training and Testing data. Report and Poster time.
 
 ## Code
 See code for preprocessing image [here](http://reinaldodaniswara.com/preprocessing.html)
