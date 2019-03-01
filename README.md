@@ -63,7 +63,7 @@ Click [here](courses.md) to see the list of courses that I took in UCLA.
 	 - Written in Java using Page Object Model (POM) design pattern for the UI flexibility purpose
 	 -  Using multiple framework such as Cucumber, TestNG, Maven.
 	 -  See project [**DEMO**](https://www.youtube.com/watch?v=qYCp0PRo2k8&t=1s)
-	 - See project [**DETAILS**](https://github.com/rdans/kbb)
+	 - See project [**DETAILS**](kbb.md)
 
 
 # Awards
