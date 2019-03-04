@@ -1,4 +1,5 @@
 
+
 # WebTesting - E2E
 Main purpose of creating this project is to create a basic automation test to validate basic functionality of Kelley Blue Book website. It has 3 test scenarios:
 1. E2E test, where users navigate to the website and try to get a value for users' car.
@@ -13,8 +14,15 @@ Main purpose of creating this project is to create a basic automation test to va
 
 ## Project Details
 This project was written in Java with help of Selenium Web Driver, written in Page Object Model (POM) design pattern to enhance the flexibility of modifying the code, once the UI of the website changes. 
+
+<br />
+<center>
+<img align="middle" width="800" height="375" src="https://drive.google.com/uc?id=1IApF01kewKfVAryrjz-h6aXHevnftmpq">
+</center>
+
 <br />
 With help of Cucumber, it will improve the readability of the code by describing the use case scenario. For example, 
+
 ```Gherkin
 Feature: Login Application
 Scenario Outline: User failed to login
